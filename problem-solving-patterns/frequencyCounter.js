@@ -23,7 +23,12 @@ function same(arr1, arr2) {
   // if arr2[j] === arr1[i] ^ 2 ?
   // countObj[arr1[i]] > 0 ? countObj[arr1[i]]++ : countObj[arr1[i]] = 1;
 
+  // for (let i = 0; i < arr1.length; i++) {
+  //   if (!countObj[arr1[i]] ||) {
+  //   }
+  // }
+
   return countObj;
 }
 
-console.log(same([1, 2, 3], [4, 1, 9]));
+console.log(same([1, 2, 3, 2], [4, 1, 9, 4]));
