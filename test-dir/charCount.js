@@ -3,10 +3,12 @@
 // "abcd"
 function charCount(inputString) {
   if (typeof inputString !== "string") {
-    console.log("Please enter a valid string containing letters");
+    console.log(
+      "Please enter a valid string containing letters and / or numbers"
+    );
     return;
   } else {
-    const validCharacters = "abcdefghijklmnopqrstuvwxyz".split("");
+    const validCharacters = "abcdefghijklmnopqrstuvwxyz0123456789".split("");
     const inputStringToArr = inputString.split("");
     const charCounter = [];
     for (let i = 0; i < validCharacters.length; i++) {
@@ -29,4 +31,4 @@ function charCount(inputString) {
 }
 
 charCount(1);
-charCount("Hello wohhrlddd!");
+charCount("Your PIN number is 1234");
