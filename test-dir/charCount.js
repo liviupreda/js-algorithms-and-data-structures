@@ -8,16 +8,13 @@ function charCount(inputString) {
   for (let i = 0; i < validCharacters.length; i++) {
     charCounter.push(0);
   }
-  console.log(charCounter);
   for (let i = 0; i < validCharacters.length; i++) {
     for (let j = 0; j < inputStringToArr.length; j++) {
-      if (inputStringToArr[j] === validCharacters[i]) {
-        console.log(inputStringToArr[j]);
+      if (inputStringToArr[j].toLowerCase() === validCharacters[i]) {
         charCounter[i]++;
       }
     }
   }
-  console.log(charCounter);
   for (let i = 0; i < charCounter.length; i++) {
     if (charCounter[i] > 0)
       console.log(
