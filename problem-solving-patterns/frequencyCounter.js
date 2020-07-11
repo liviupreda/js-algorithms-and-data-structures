@@ -10,25 +10,31 @@ The order does not matter; the frequency of values must be the same
 // same([1,2,1], [4,4,1]) //false (must be same frequency)
 
 function same(arr1, arr2) {
-  let countObj = {};
-  // for each element of arr1
+  // assign arr1 to object {element: element^2}
+  let arr1Obj = {};
+  let arr2Obj = {};
   for (let i = 0; i < arr1.length; i++) {
-    for (let j = 0; j < arr2.length; j++) {
-      if (arr2[j] === Math.pow(arr1[i], 2)) {
-        countObj[arr1[i]] > 0 ? countObj[arr1[i]]++ : (countObj[arr1[i]] = 1);
-      }
-    }
+    arr1Obj[arr1[i]] = Math.pow(arr1[i], 2);
   }
-  // for each element of arr2
-  // if arr2[j] === arr1[i] ^ 2 ?
-  // countObj[arr1[i]] > 0 ? countObj[arr1[i]]++ : countObj[arr1[i]] = 1;
-
-  // for (let i = 0; i < arr1.length; i++) {
-  //   if (!countObj[arr1[i]] ||) {
-  //   }
-  // }
-
-  return countObj;
+  for (let i = 0; i < arr2.length; i++) {
+    arr2Obj[Math.sqrt(arr2[i])] = arr2[i];
+  }
+  console.log(arr1Obj);
+  console.log(arr2Obj);
+  return shallowEqual(arr1Obj, arr2Obj);
 }
 
-console.log(same([1, 2, 3, 2], [4, 1, 9, 4]));
+function shallowEqual(obj1, obj2) {
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+
+  for (let key of keys1) {
+    if (obj1[key] !== obj2[key]) return false;
+  }
+  return true;
+}
+
+console.log(same([1, 2, 1], [4, 4, 1]));
