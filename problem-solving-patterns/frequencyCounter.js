@@ -10,7 +10,8 @@ The order does not matter; the frequency of values must be the same
 // same([1,2,1], [4,4,1]) //false (must be same frequency)
 
 function same(arr1, arr2) {
-  // assign arr1 to object {element: element^2}
+  // assign arr1 to object1 {number: frequency}
+  // assign arr2 to object2 {sqrt(number ^ 2) : frequency}
   let arr1Obj = {};
   let arr2Obj = {};
   for (let i = 0; i < arr1.length; i++) {
