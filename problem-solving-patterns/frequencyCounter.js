@@ -14,10 +14,12 @@ function same(arr1, arr2) {
   let arr1Obj = {};
   let arr2Obj = {};
   for (let i = 0; i < arr1.length; i++) {
-    arr1Obj[arr1[i]] = Math.pow(arr1[i], 2);
+    arr1[i] === arr1Obj[arr1[i]] ? arr1Obj[arr1[i]]++ : (arr1Obj[arr1[i]] = 1);
   }
   for (let i = 0; i < arr2.length; i++) {
-    arr2Obj[Math.sqrt(arr2[i])] = arr2[i];
+    Math.sqrt(arr2[i]) === arr2Obj[arr2[i]]
+      ? arr2Obj[Math.sqrt(arr2[i])]++
+      : (arr2Obj[Math.sqrt(arr2[i])] = 1);
   }
   console.log(arr1Obj);
   console.log(arr2Obj);
