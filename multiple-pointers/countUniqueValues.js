@@ -11,16 +11,16 @@ countUniqueValues([-2,-1,-1,0,1]) //4
 
 function countUniqueValues(arr) {
   let left = 0;
-  let right = arr.length - 1;
-  let counter = 0;
-  while (left < right) {
-    if (arr[left] < arr[right]) {
+  let right = left + 1;
+  let counter = arr.length ? 1 : 0;
+  do {
+    if (arr[left] !== arr[right]) {
       counter++;
     }
     left++;
-    right--;
-  }
+    right++;
+  } while (right < arr.length);
   return counter;
 }
 
-console.log(countUniqueValues([]));
+console.log(countUniqueValues([-2, -1, -1, 0, 1, 7, 9]));
