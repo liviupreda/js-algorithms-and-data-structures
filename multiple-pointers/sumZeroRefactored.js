@@ -8,6 +8,7 @@ sumZero([-3, -2, -1, 0, 1, 2, 3]) // [-3, 3]
 sumZero([-2, 0, 1, 3]) // undefined
 sumZero([1, 2, 3]) // undefined
 sumZero([-4, -3, -2, -1, 0, 1, 2, 5]) // [-2, 2]
+sumZero([-4, -3, -2, -1, 0, 1, 2, 3, 10]) // [-3, 3]
 
 Refactored solution time O(n)
 */
