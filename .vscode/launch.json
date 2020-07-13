@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/multiple-pointers/sumZero.js"
+      "program": "${workspaceFolder}/multiple-pointers/sumZeroRefactored.js"
     }
   ]
 }

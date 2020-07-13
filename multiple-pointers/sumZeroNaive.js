@@ -6,8 +6,11 @@ or undefined if a pair does not exist
 
 sumZero([-3, -2, -1, 0, 1, 2, 3]) // [-3, 3]
 sumZero([-2, 0, 1, 3]) // undefined
-sumZero ([1, 2, 3]) // undefined
+sumZero([1, 2, 3]) // undefined
+sumZero([-4, -3, -2, -1, 0, 1, 2, 5]) // [-2, 2]
 */
+
+// Naive solution, two loops, time O(n^2) space O(1)
 
 function sumZero(arr) {
   // loop over array
@@ -21,4 +24,4 @@ function sumZero(arr) {
   }
 }
 
-console.log(sumZero([-2, 0, 1, 3])); // undefined
+sumZero([-4, -3, -2, -1, 0, 1, 2, 5]); // [-2, 2]
