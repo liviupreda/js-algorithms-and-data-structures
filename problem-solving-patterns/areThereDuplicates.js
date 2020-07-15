@@ -18,4 +18,8 @@ function areThereDuplicates(...args) {
   return false;
 }
 
+function areThereDuplicatesSet() {
+  return new Set(arguments).size !== arguments.length;
+}
+
 console.log(areThereDuplicates("a", "b", "c", "d"));
