@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/problem-solving-patterns/averagePair.js"
+      "program": "${workspaceFolder}/problem-solving-patterns/isSubsequence.js"
     }
   ]
 }
