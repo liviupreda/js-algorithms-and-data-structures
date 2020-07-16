@@ -12,6 +12,15 @@ isSubsequence('abc', 'abracadabra'); // true
 isSubsequence('abc', 'acb'); //false (order matters)
 */
 
-function isSubsequence() {}
+function isSubsequence(str1, str2) {
+  if (str1.length > str2.length) return false;
 
-console.log(isSubsequence("hello", "hello world"));
+  for (let char1 of str1) {
+    for (let char2 of str2) {
+      if (char1 === char2) console.log(char1);
+    }
+  }
+}
+
+// console.log(isSubsequence("hello", "hello world"));
+isSubsequence("hello", "helloworld"); //true
